@@ -1,0 +1,85 @@
+.body__link {
+    display: block;
+    position: relative;
+    width: 100%;
+    color: rgb(255,255,255);
+    stroke: white;
+    height: 1rem;
+    border: 1px solid rgb(255,255,255);
+    border-radius: 2rem;
+    padding: 1.2rem .2rem;
+    list-style-type: none;
+    margin: .5rem 0;
+    transition: background-color .2s ease-in, color .2s ease-in, stroke .2s ease-in;
+
+    &:hover {
+        background-color: white;
+        color: black;
+        stroke: black;
+    }
+
+    a {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        color: inherit;
+        margin: 0;
+        text-decoration: none;
+
+        &:hover > .share-icon__wrapper {
+            opacity: 1;
+        }
+    }
+
+    .body__link--icon {
+        position: relative;
+        
+        width: 2.9rem;
+        height: 2.9rem;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+            cursor: pointer;
+            height: auto;
+            max-height: 100%;
+            width: auto;
+            position: absolute;
+            top: -9999px;
+            bottom: -9999px;
+            left: -9999px;
+            right: -9999px;
+            margin: auto;
+        }
+
+        svg {
+            stroke: inherit;
+            stroke-width: 1.5;
+            position: relative;
+            top: 25%;
+        }
+    }
+
+    .body__link--text {
+        font-family: Inter-Regular;
+        font-size: 1rem;
+        font-weight: 500;
+        justify-self: center;
+        margin: 0 auto;
+    }
+
+    .share-icon__wrapper {
+        height: 2.9rem;
+        width: 2.9rem;
+        margin: 0 .5rem;
+        opacity: 0;
+
+        svg {
+            position: relative;
+            top: 25%;
+        }
+    }
+}
