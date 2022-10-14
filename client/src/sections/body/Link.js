@@ -8,6 +8,7 @@ const Link = props => {
     return (
       <li className="body__link">
         <a href="#" target="_blank">
+
           <div className="body__link--icon">
             { imgUrl 
                 ?
@@ -27,8 +28,10 @@ const Link = props => {
                     </svg>
             }
           </div>
+
           <p className="body__link--text">{text}</p>
-          <div className="share-icon__wrapper">
+
+          <div className="body__link--share">
             <svg 
                 viewBox="0 0 24 24" 
                 width="20" 
@@ -42,6 +45,7 @@ const Link = props => {
                 <line x1="12" y1="2" x2="12" y2="15"></line>
             </svg>
           </div>
+
         </a>
       </li>
     );

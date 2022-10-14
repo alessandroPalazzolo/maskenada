@@ -7,8 +7,8 @@
     width: 100%;
 
     #logo {
-        height: 6rem;
-        width: 6rem;
+        height: 9.6rem;
+        width: 9.6rem;
         border-radius: 50%;
         background-image: url('../../assets/logo.png');
         background-size: contain;
@@ -19,7 +19,7 @@
     h1 {
         color: white;
         font-weight: 700;
-        margin-bottom: 2rem;
+        margin-bottom: 3.2rem;
     }
 }
 
@@ -32,8 +32,14 @@
 
     .header__links--item {
         fill: rgb(255, 255, 255);
-        height: 2rem;
-        width: 2rem;
+        height: 3.2rem;
+        width: 3.2rem;
         margin: 0 .5rem;
     }
 }
+
+@media screen and (min-width: 710px) {
+    .header__wrapper {
+        width: 67.9rem;
+    }
+} 
