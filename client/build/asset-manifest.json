@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d4da2f5d.css",
+    "main.js": "/static/js/main.d109e8b8.js",
+    "static/media/Inter-Regular.ttf": "/static/media/Inter-Regular.e89cb19905e7db5591b0.ttf",
+    "static/media/logo.png": "/static/media/logo.579ea4731ae6c5955d26.png",
+    "index.html": "/index.html",
+    "main.d4da2f5d.css.map": "/static/css/main.d4da2f5d.css.map",
+    "main.d109e8b8.js.map": "/static/js/main.d109e8b8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d4da2f5d.css",
+    "static/js/main.d109e8b8.js"
+  ]
+}
