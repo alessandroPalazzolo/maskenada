@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
+import Backdrop from "../../shared/Backdrop";
 import "./Link.scss";
 
 const Link = props => {
     const { text, imgUrl } = props;
+
+    const [showShareModal, setShowShareModal] = useState(false);
+
+    const shareModalHandler = e => {
+      e.preventDefault();
+      setShowShareModal(!showShareModal);
+    }
 
     return (
       <li className="body__link">
@@ -31,7 +39,7 @@ const Link = props => {
 
           <p className="body__link--text">{text}</p>
 
-          <div className="body__link--share">
+          <div className="body__link--share" onClick={shareModalHandler}>
             <svg 
                 viewBox="0 0 24 24" 
                 width="20" 
@@ -47,6 +55,8 @@ const Link = props => {
           </div>
 
         </a>
+
+        <Backdrop onShow={showShareModal} click={shareModalHandler}/>
       </li>
     );
 }

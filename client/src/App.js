@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Header from './sections/header/Header';
+import Header from './sections/header/Header'
 import Body from './sections/body/Body'
 import './App.scss';
 
