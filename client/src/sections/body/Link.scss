@@ -42,6 +42,7 @@
             border-radius: 50%;
             overflow: hidden;
             margin: 0 .3rem;
+            flex-shrink: 0;
 
             img {
                 height: auto;
@@ -61,7 +62,7 @@
         }
     
         .body__link--text {
-            white-space: nowrap;
+            white-space: normal;
             font-family: Inter-Regular;
             font-size: 1.6rem;
             font-weight: 500;
@@ -76,3 +77,9 @@
         }
     }
 }
+
+@media screen and (max-width: 400px) {
+    .body__link {
+        height: fit-content;
+    }
+} 
