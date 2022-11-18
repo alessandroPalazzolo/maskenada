@@ -5,8 +5,9 @@ import './ShareLink.scss';
 
 const ShareLink = ({ platform, platformIcon, redirect }) => {
   let itemUrl = useSelector(state => state.bodyLink.selected);
-  const noUrlShareSupport = itemUrl.includes("messenger");
-  itemUrl = noUrlShareSupport ? itemUrl : "";
+  const noUrlShareSupport = redirect.includes("messenger");
+  console.log(itemUrl, noUrlShareSupport);
+  itemUrl = noUrlShareSupport ? "" : itemUrl;
 
   return (
     <li className="share__link">
