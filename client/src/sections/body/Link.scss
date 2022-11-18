@@ -82,4 +82,8 @@
     .body__link {
         height: fit-content;
     }
-} 
+
+    .body__link--share {
+        z-index: -1;
+    }
+}

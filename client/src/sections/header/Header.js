@@ -8,7 +8,7 @@ const Header = props => {
         <div id="logo"></div>
         <h1>@maskenada</h1>
         <div className="header__links--wrapper">
-          <a href="#">
+          <a href='#'>
             <svg
               enable-background="new 0 0 24 24"
               viewBox="0 0 24 24"

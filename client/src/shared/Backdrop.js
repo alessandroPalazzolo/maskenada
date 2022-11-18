@@ -1,14 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+import Modal from './Modal';
 import './Backdrop.scss';
 
 const Backdrop = props => {
     const content = (
         <div className="backdrop__wrapper" onClick={props.click}>
-            <div className="modal__wrapper">
-                    
-            </div>
+            <Modal />
         </div>
     );
 

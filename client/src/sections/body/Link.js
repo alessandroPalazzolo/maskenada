@@ -1,21 +1,31 @@
 import React, { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { selectLink, unselectLink } from "../../store/slices/bodyLinkSlice";
 
 import Backdrop from "../../shared/Backdrop";
 import "./Link.scss";
 
 const Link = props => {
-    const { text, imgUrl } = props;
+    const { text, imgUrl, redirect } = props;
 
     const [showShareModal, setShowShareModal] = useState(false);
+    const dispatch = useDispatch();
 
     const shareModalHandler = e => {
       e.preventDefault();
+
+      if (!showShareModal){
+        dispatch(selectLink(redirect));
+      } else {
+        dispatch(selectLink(unselectLink()));
+      }
+
       setShowShareModal(!showShareModal);
-    }
+    };
 
     return (
       <li className="body__link">
-        <a href="#" target="_blank">
+        <a href={redirect} target="_blank">
 
           <div className="body__link--icon">
             { imgUrl 
