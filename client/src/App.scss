@@ -5,8 +5,8 @@
     padding: 6.4rem 10% 6.4rem 10%;
     flex-direction: column;
     // background-image: linear-gradient(0deg, rgb(30, 35, 48), rgb(127, 139, 153));
-    background: url("./assets/background-video.gif") no-repeat;
-    background-position: left;
+    background: url("./assets/background-video.gif") repeat;
+    background-position: center;
     background-size: cover;
 
     &:before {
@@ -16,6 +16,14 @@
         height: 100%;
         width: 100%;
         background-color: black;
-        opacity: .75;
+        opacity: .6;
+    }
+}
+
+@media screen and (max-width: 701px){
+    .app__wrapper {
+        background: url("./assets/background-video.gif") repeat;
+        background-position: center;
+        background-size: contain;
     }
 }

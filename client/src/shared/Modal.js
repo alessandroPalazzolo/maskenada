@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ShareLink from './ShareLink';
+import ShareLink from './SharePlatform';
 import * as svgs from '../assets/svgs'; 
 
 import './Modal.scss';

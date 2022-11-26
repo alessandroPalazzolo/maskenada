@@ -1,9 +1,9 @@
 import React from 'react';
 import { useSelector } from "react-redux";
 
-import './ShareLink.scss';
+import './SharePlatform.scss';
 
-const ShareLink = ({ platform, platformIcon, redirect }) => {
+const SharePlatform = ({ platform, platformIcon, redirect }) => {
   let itemUrl = useSelector(state => state.bodyLink.selected);
   const noUrlShareSupport = redirect.includes("messenger");
   console.log(itemUrl, noUrlShareSupport);
@@ -38,4 +38,4 @@ const ShareLink = ({ platform, platformIcon, redirect }) => {
   );
 }
 
-export default ShareLink;
+export default SharePlatform;
