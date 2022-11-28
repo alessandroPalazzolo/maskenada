@@ -4,7 +4,6 @@
     height: fit-content;
     padding: 6.4rem 10% 6.4rem 10%;
     flex-direction: column;
-    // background-image: linear-gradient(0deg, rgb(30, 35, 48), rgb(127, 139, 153));
     background: url("./assets/background-video.gif") repeat;
     background-position: center;
     background-size: cover;
@@ -16,7 +15,7 @@
         height: 100%;
         width: 100%;
         background-color: black;
-        opacity: .6;
+        opacity: .5;
     }
 }
 

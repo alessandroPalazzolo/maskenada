@@ -2,6 +2,9 @@
 const express = require("express");
 const path = require('path');
 const mongoose = require("mongoose");
+if (!(process.env.NODE_ENV == "production")){
+    require("dotenv").config();
+}
 
 // LOCAL IMPORT
 const cors = require('./middleware/cors');
@@ -18,6 +21,7 @@ const pathToClientRouter = path.resolve(__dirname, 'client/build/index.js')
 
 // MAIN
 app.use(cors);
+app.use(express.json());
 
 app.use(express.static(pathToClientBuild));
 app.get('/', express.static(pathToClientRouter));

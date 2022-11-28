@@ -4,7 +4,7 @@ const useAuth = require('../middleware/auth');
 const {
     login,
     getPostById,
-    createNewPost,
+    createPost,
     updatePostById,
     deletePostById
 } = require('../controllers/admin-controllers');
@@ -13,10 +13,10 @@ const router = Router();
 
 router.post('/login', login);
 
-router.use(useAuth);
+// router.use(useAuth);
 
 router.get('/posts/:pid', getPostById);
-router.post('/posts', createNewPost);
+router.post('/post', createPost);
 router.patch('/posts/:pid', updatePostById);
 router.delete('/posts/:pid', deletePostById);
 
