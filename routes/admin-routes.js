@@ -13,7 +13,7 @@ const router = Router();
 
 router.post('/login', login);
 
-// router.use(useAuth);
+router.use(useAuth);
 
 router.get('/posts/:pid', getPostById);
 router.post('/post', createPost);

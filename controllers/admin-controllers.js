@@ -8,14 +8,15 @@ const HttpError = require("../models/HttpError");
 const Post = require("../models/post-model");
 const Admin = require("../models/admin-model");
 
-// test
 const login = async (req, res, next) => {
-    const { username, password } = req.params;
+    const { username, password } = req.body;
     const { TOKEN_SIGNATURE_STRING } = process.env;
     let adminFound, isValidPassword = false;
 
     try {
-        adminFound = await Admin.findOne({ username });
+        adminFound = await Admin
+                            .findOne({ username })
+                            .select('password');
     } catch(err) {
         return next(new HttpError("Database query error", 500));
     }
@@ -51,7 +52,6 @@ const login = async (req, res, next) => {
     res.status(200).json({ adminId, token });
 }
 
-// test
 const getPostById = async (req, res, next) => {
     const { pid } = req.params;
     let postFound;
@@ -81,7 +81,6 @@ const createPost = async (req, res, next) => {
     res.status(201).json(newPost.toObject({ getters: true }));
 }
 
-// test
 const updatePostById = async (req, res, next) => {
     const { pid } = req.params;
     const { label: newLabel } = req.body;
@@ -108,7 +107,6 @@ const updatePostById = async (req, res, next) => {
     res.status(200).json(postToUpdate.toObject({ getters: true }));
 }
 
-// test
 const deletePostById = async (req, res, next) => {
     const { pid } = req.params;
     let postToDelete;
