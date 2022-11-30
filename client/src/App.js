@@ -1,15 +1,20 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
-import Header from './sections/header/Header'
-import Body from './sections/body/Body'
+import Home from "./pages/home/Home";
+import Admin from "./pages/admin/Admin";
+import RedirectQR from "./shared/domain/RedirectQR"
 import './App.scss';
 
 function App() {
   return (
-    <div className="app__wrapper center">
-      <Header />
-      <Body />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/" element={ <Home /> } />
+        <Route path="/admin" element={ <Admin /> } />
+        <Route path="/redirect" element={ <RedirectQR /> } />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

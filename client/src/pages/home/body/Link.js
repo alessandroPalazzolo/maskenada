@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { selectLink, unselectLink } from "../../store/slices/bodyLinkSlice";
+import { selectLink, unselectLink } from "../../../store/slices/bodyLinkSlice";
 
-import Backdrop from "../../shared/Backdrop";
+import Backdrop from "../../..//shared/Backdrop";
 import "./Link.scss";
 
 const Link = props => {
